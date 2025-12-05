@@ -1,0 +1,13 @@
+export default function PostCard({
+    companyName,
+    postTime,
+    introText,
+    media,
+    likes,
+    commentsCount,
+    comments,
+    onLike,
+    onComment,
+    onShare,
+    onAddComment,
+}
