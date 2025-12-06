@@ -1,4 +1,5 @@
-import {  Briefcase } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
+import Link from 'next/link';
 export default function Header() {
     return (
         <header className="bg-white shadow-md sticky top-0 z-10">
@@ -17,12 +18,16 @@ export default function Header() {
         {/*If user connected <a>Manage your companies<a> */}
       </nav>
       <div className="space-x-4">
-        <button className="text-gray-600 hover:text-indigo-600 font-medium">
-          Sign In  {/*If user connected user profile there */}
-        </button>
-        <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-150 shadow-md">
-          Create Company
-        </button>
+        <Link href="/connexion">
+          <button className="text-gray-600 hover:text-indigo-600 font-medium">
+            Sign In  {/*If user connected user profile there */}
+          </button>
+        </Link>
+        <Link href="/company/new">
+          <button className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-150 shadow-md">
+            Create Company
+          </button>
+        </Link>
       </div>
     </div>
   </header>

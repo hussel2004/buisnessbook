@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Search, MapPin, Tag, Newspaper, ArrowRight, Briefcase, Star } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Link from 'next/link';
 // --- Placeholder Components (Internal to this file) ---
 
 
@@ -108,9 +109,9 @@ const PromotionsSection = () => {
         </div>
         
         <div className="text-center mt-12">
-          <a href="#" className="text-indigo-600 font-semibold hover:text-indigo-700 transition duration-150 flex items-center justify-center">
+          <Link href="/promotions" className="text-indigo-600 font-semibold hover:text-indigo-700 transition duration-150 flex items-center justify-center">
             See all promotions <ArrowRight className="w-4 h-4 ml-2" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
@@ -168,9 +169,9 @@ const FeaturedCompaniesSection = () => {
         </div>
         
         <div className="text-center mt-12">
-          <a href="#" className="text-indigo-600 font-semibold hover:text-indigo-700 transition duration-150 flex items-center justify-center">
+          <Link href="/company" className="text-indigo-600 font-semibold hover:text-indigo-700 transition duration-150 flex items-center justify-center">
             See all companies <ArrowRight className="w-4 h-4 ml-2" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
@@ -222,9 +223,9 @@ const CompanyPostsSection = () => {
         </div>
         
         <div className="text-center mt-12">
-          <a href="#" className="text-indigo-600 font-semibold hover:text-indigo-700 transition duration-150 flex items-center justify-center">
+          <Link href="/posts" className="text-indigo-600 font-semibold hover:text-indigo-700 transition duration-150 flex items-center justify-center">
             Explore all posts <ArrowRight className="w-4 h-4 ml-2" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
@@ -241,9 +242,11 @@ const CreateCompanyCTA = () => (
       <p className="text-indigo-200 text-lg mb-8">
         Connect with local customers, post your promotions, and share your company news with the community.
       </p>
+      <Link href="/company/new">
       <button className="bg-white text-indigo-600 font-bold px-8 py-3 rounded-full shadow-lg hover:bg-indigo-50 transition duration-300 transform hover:scale-105">
-        Create Your Free Company Page (Sign-in Required)
+        Create Your Free Company Page
       </button>
+      </Link>
     </div>
   </section>
 );
