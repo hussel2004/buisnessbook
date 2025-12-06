@@ -28,17 +28,7 @@ export default function CompanyAboutPage(){
                     {/* About Section */}
                     <section id="about">
                         <AboutCard />
-                    </section>
-
-                    {/* Similar Companies Section */}
-                    <section id="similar-companies">
-                        <SimilarCompanyBar />
-                    </section>
-
-                    {/* Comments/Reviews Section */}
-                    <section id="reviews">
-                        <CommentBar />
-                    </section>
+                    </section>                  
                 </div>
 
                 {/* Optional: Back to Top Button */}

@@ -92,15 +92,6 @@ export default function CompanyPromotionsPage(){
                         
                     </section>
 
-                    {/* Similar Companies Section */}
-                    <section id="similar-companies">
-                        <SimilarCompanyBar />
-                    </section>
-
-                    {/* Comments/Reviews Section */}
-                    <section id="reviews">
-                        <CommentBar />
-                    </section>
                 </div>
 
                 {/* Optional: Back to Top Button */}

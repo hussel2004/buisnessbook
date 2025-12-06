@@ -1,8 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
 
-// Si vous avez défini l'interface dans un fichier séparé (ex: types/company.ts)
-// import { CompanyCardProps } from '@/types/company'; 
-// Sinon, incluez-la ici:
+// Interface inchangée
 export interface CompanyCardProps {
     id: string;
     logoUrl?: string;
@@ -10,8 +9,8 @@ export interface CompanyCardProps {
     description: string;
     location: string;
     phoneNumber?: string;
-    keyRefs?: string[]; // Tableau de 3 références clés
-    onClick?: (companyId: string) => void;
+    keyRefs?: string[];
+    onClick?: (companyId: string) => void; 
 }
 
 export default function LightCompanyCard({
@@ -22,16 +21,25 @@ export default function LightCompanyCard({
     location,
     phoneNumber,
     keyRefs,
-    onClick
+    onClick // La prop onClick peut maintenant être réutilisée pour des actions spécifiques sur la carte si nécessaire
 }: CompanyCardProps) {
     const defaultLogo = "https://via.placeholder.com/64x64?text=Logo"; // Logo par défaut
+    
+    // 1. Définir le chemin vers la page dynamique
+    const hrefPath = `/company/${id}`;
+
+    // Le Link est déplacé pour n'envelopper que le titre.
+    // Le conteneur principal revient à une balise <div>.
 
     return (
         // Conteneur principal de la carte
+        // Utilisation de onClick ici si la carte doit déclencher une action de navigation/modale spécifique
         <div 
             className="flex flex-col bg-white rounded-lg shadow-md p-4 mb-4 transition-all duration-200 hover:shadow-lg hover:ring-2 hover:ring-blue-200"
-            onClick={() => onClick && onClick(id)} // Rendre la carte cliquable si onClick est fourni
-            style={onClick ? { cursor: 'pointer' } : {}} // Changer le curseur si cliquable
+            // Réintroduire la logique onClick sur le conteneur principal si la carte doit être cliquable en entier
+            // Pour ce scénario, on va laisser le onClick géré par le Link du titre pour la navigation par défaut
+            onClick={onClick ? () => onClick(id) : undefined} 
+            style={onClick ? { cursor: 'pointer' } : {}}
         >
             {/* Haut de la carte: Logo et Nom de l'entreprise */}
             <div className="flex items-center mb-3">
@@ -44,14 +52,21 @@ export default function LightCompanyCard({
                     />
                 </div>
                 
-                {/* Nom de l'entreprise */}
-                <h3 className="text-xl font-bold text-gray-900 leading-tight">
-                    {companyName}
-                </h3>
+                {/* Nom de l'entreprise - ENVELOPPÉ PAR Link */}
+                <Link 
+                    href={hrefPath} 
+                    passHref 
+                    // Ajout de classes pour souligner le titre au survol et le rendre clairement cliquable
+                    className="text-xl font-bold text-gray-900 leading-tight hover:text-blue-600 hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-sm"
+                    // Empêche la propagation du clic pour ne pas déclencher le onClick du conteneur si présent
+                    onClick={(e) => e.stopPropagation()} 
+                >
+                    <h3>{companyName}</h3>
+                </Link>
             </div>
 
             {/* Description de l'entreprise */}
-            <p className="text-gray-600 text-sm mb-4 line-clamp-3"> {/* line-clamp pour limiter les lignes */}
+            <p className="text-gray-600 text-sm mb-4 line-clamp-3">
                 {description}
             </p>
 
@@ -65,7 +80,8 @@ export default function LightCompanyCard({
                     <a 
                         href={`tel:${phoneNumber}`} 
                         className="flex items-center text-blue-600 hover:underline"
-                        onClick={(e) => e.stopPropagation()} // Empêche l'événement onClick de la carte de se déclencher
+                        // Toujours important: Empêche la propagation du clic (surtout si le div principal a un onClick)
+                        onClick={(e) => e.stopPropagation()} 
                     >
                         <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                         {phoneNumber}
@@ -75,10 +91,10 @@ export default function LightCompanyCard({
 
             {/* Références Clés (si présentes) */}
             {keyRefs && keyRefs.length > 0 && (
-                <div className="mt-auto pt-3 border-t border-gray-100"> {/* mt-auto pour pousser en bas, pt-3 pour padding top */}
+                <div className="mt-auto pt-3 border-t border-gray-100">
                     <p className="text-xs font-semibold text-gray-500 mb-2">Références Clés:</p>
                     <div className="flex flex-wrap gap-2">
-                        {keyRefs.slice(0, 3).map((ref, index) => ( // Limite à 3 références
+                        {keyRefs.slice(0, 3).map((ref, index) => (
                             <span 
                                 key={index} 
                                 className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full"
