@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/J-STORE/Desktop/buisnessbook/app/company/new/page.tsx"],"sourcesContent":["export default function NewCompanyPage() {\r\n    return (\r\n        <div className=\"min-h-screen bg-gray-50 flex items-center justify-center\">\r\n            <h1 className=\"text-3xl font-bold text-gray-900\">Create a New Company Profile</h1>\r\n            </div>\r\n        );\r\n    }"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACpB,qBACI,8OAAC;QAAI,WAAU;kBACX,cAAA,8OAAC;YAAG,WAAU;sBAAmC;;;;;;;;;;;AAGzD"}}]
+}

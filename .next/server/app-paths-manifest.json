@@ -1,0 +1,21 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/company/[id]/about/page": "app/company/[id]/about/page.js",
+  "/company/[id]/dashboard/page": "app/company/[id]/dashboard/page.js",
+  "/company/[id]/page": "app/company/[id]/page.js",
+  "/company/[id]/posts/[id-post]/page": "app/company/[id]/posts/[id-post]/page.js",
+  "/company/[id]/posts/page": "app/company/[id]/posts/page.js",
+  "/company/[id]/promotions/[id-promotion]/page": "app/company/[id]/promotions/[id-promotion]/page.js",
+  "/company/[id]/promotions/page": "app/company/[id]/promotions/page.js",
+  "/company/[id]/update/page": "app/company/[id]/update/page.js",
+  "/company/new/page": "app/company/new/page.js",
+  "/company/page": "app/company/page.js",
+  "/connexion/page": "app/connexion/page.js",
+  "/forgot-password/page": "app/forgot-password/page.js",
+  "/org-management/page": "app/org-management/page.js",
+  "/page": "app/page.js",
+  "/posts/page": "app/posts/page.js",
+  "/promotions/page": "app/promotions/page.js",
+  "/register/page": "app/register/page.js"
+}

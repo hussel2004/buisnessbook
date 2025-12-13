@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/J-STORE/Desktop/buisnessbook/app/company/page.tsx"],"sourcesContent":["\r\nimport type { Comment } from \"@/components/PostCard\";\r\n\r\nconst mockComments: Comment[] = [\r\n    { id: 1, user: \"Alice\", text: \"Great post!\" },\r\n    { id: 2, user: \"Bob\", text: \"Thanks for sharing.\" },\r\n    { id: 3, user: \"Charlie\", text: \"Interesting insights.\" },\r\n];\r\n\r\nexport default function vizualisation() {\r\n    return (\r\n        <PostCard\r\n            companyName=\"Acme Corp\"\r\n            postTime=\"2 hours ago\"\r\n            introText=\"This is an introductory text for the post. It gives a brief overview or context.\"\r\n            likes={12}\r\n            commentsCount={mockComments.length}\r\n            comments={mockComments}\r\n            // Optionally add handlers for like, comment, share, addComment\r\n        />\r\n    );\r\n}"],"names":[],"mappings":";;;;;;AAGA,MAAM,eAA0B;IAC5B;QAAE,IAAI;QAAG,MAAM;QAAS,MAAM;IAAc;IAC5C;QAAE,IAAI;QAAG,MAAM;QAAO,MAAM;IAAsB;IAClD;QAAE,IAAI;QAAG,MAAM;QAAW,MAAM;IAAwB;CAC3D;AAEc,SAAS;IACpB,qBACI,8OAAC;QACG,aAAY;QACZ,UAAS;QACT,WAAU;QACV,OAAO;QACP,eAAe,aAAa,MAAM;QAClC,UAAU;;;;;;AAItB"}}]
+}

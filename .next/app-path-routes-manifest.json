@@ -1,0 +1,21 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/company/[id]/about/page": "/company/[id]/about",
+  "/company/[id]/dashboard/page": "/company/[id]/dashboard",
+  "/company/[id]/page": "/company/[id]",
+  "/company/[id]/posts/[id-post]/page": "/company/[id]/posts/[id-post]",
+  "/company/[id]/posts/page": "/company/[id]/posts",
+  "/company/[id]/promotions/[id-promotion]/page": "/company/[id]/promotions/[id-promotion]",
+  "/company/[id]/promotions/page": "/company/[id]/promotions",
+  "/company/[id]/update/page": "/company/[id]/update",
+  "/company/new/page": "/company/new",
+  "/company/page": "/company",
+  "/connexion/page": "/connexion",
+  "/forgot-password/page": "/forgot-password",
+  "/org-management/page": "/org-management",
+  "/page": "/",
+  "/posts/page": "/posts",
+  "/promotions/page": "/promotions",
+  "/register/page": "/register"
+}

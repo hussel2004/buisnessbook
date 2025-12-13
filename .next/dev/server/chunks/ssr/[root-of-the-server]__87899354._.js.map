@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/J-STORE/Desktop/buisnessbook/app/company/%5Bid%5D/dashboard/page.tsx"],"sourcesContent":["export default function CompanyDashboardPage() {\r\n  return (\r\n    <div>\r\n      <h1>Company Dashboard</h1>\r\n      {/*Basically I will vizualise company page highlights there. */}\r\n    </div>\r\n  );\r\n}"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;kBACC,cAAA,8OAAC;sBAAG;;;;;;;;;;;AAIV"}}]
+}

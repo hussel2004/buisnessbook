@@ -1,0 +1,3 @@
+module.exports=[70864,a=>{a.n(a.i(33290))},43619,a=>{a.n(a.i(79962))},13718,a=>{a.n(a.i(85523))},18198,a=>{a.n(a.i(45518))},62212,a=>{a.n(a.i(66114))},95460,a=>{"use strict";var b=a.i(7997);function c(){return(0,b.jsx)("div",{className:"min-h-screen bg-gray-50 flex items-center justify-center",children:(0,b.jsx)("h1",{className:"text-3xl font-bold text-gray-900",children:"Create a New Company Profile"})})}a.s(["default",()=>c])}];
+
+//# sourceMappingURL=_32cc1a6c._.js.map
