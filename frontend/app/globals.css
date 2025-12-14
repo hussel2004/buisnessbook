@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Variables par défaut (Light Mode) */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -11,7 +12,8 @@
   --input-border: #d1d5db;
 }
 
-html.dark {
+/* Forçage du mode sombre via la classe .dark */
+.dark {
   --background: #111827;
   --foreground: #f3f4f6;
   --background-secondary: #1f2937;
@@ -22,16 +24,15 @@ html.dark {
   --input-border: #4b5563;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
+  /* On utilise background-color pour être plus précis */
+  background-color: var(--background) !important; 
   color: var(--foreground);
-  background: var(--background);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* ... reste de tes styles (selection, focus, etc.) */
 /* Selection styles with blue theme */
 ::selection {
   background-color: rgba(59, 130, 246, 0.2);
